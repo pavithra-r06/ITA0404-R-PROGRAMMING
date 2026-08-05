@@ -1,1 +1,18 @@
+library(reshape2)
 
+data(airquality)
+
+melt_data <- melt(airquality,id=c("Month","Day"))
+
+print(head(melt_data))
+
+cast_data <- dcast(melt_data,
+                   Month~variable,
+                   mean)
+
+print(cast_data)
+
+aggregate(cbind(Ozone,Solar.R,Wind,Temp)~Month,
+          airquality,
+          mean,
+          na.rm=TRUE)

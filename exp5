@@ -1,1 +1,13 @@
+# Women's dataset heights as factor
+data(women)
 
+height_factor <- factor(women$height)
+
+print(height_factor)
+levels(height_factor)
+
+# Random LETTERS sample
+letters_factor <- factor(sample(LETTERS, 10))
+
+print(letters_factor)
+levels(letters_factor)

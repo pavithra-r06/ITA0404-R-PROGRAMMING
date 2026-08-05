@@ -1,0 +1,20 @@
+library(reshape2)
+
+data(ChickWeight)
+
+head(ChickWeight)
+
+sorted <- ChickWeight[order(ChickWeight$Diet),]
+
+print(head(sorted))
+
+melt_data <- melt(ChickWeight,
+                  id=c("Chick","Diet"))
+
+head(melt_data)
+
+cast_data <- dcast(melt_data,
+                   Diet~variable,
+                   mean)
+
+print(cast_data)

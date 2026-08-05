@@ -1,0 +1,6 @@
+a1 <- array(1:6,c(2,3))
+a2 <- array(7:12,c(2,3))
+
+result <- rbind(a1,a2)
+
+print(result)

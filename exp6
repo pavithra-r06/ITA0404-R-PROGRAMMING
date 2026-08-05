@@ -1,1 +1,15 @@
+vec <- c(10,20,30,40)
 
+mat <- matrix(1:9, nrow=3)
+
+myfun <- function(x)
+{
+  return(x^2)
+}
+
+mylist <- list(Vector=vec,
+               Matrix=mat,
+               Function=myfun)
+
+print(mylist)
+mylist$Function(5)

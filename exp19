@@ -1,0 +1,12 @@
+advertising <- data.frame(
+  Spend=c(10,20,30,40,50),
+  Sales=c(15,25,35,45,55)
+)
+
+model <- lm(Sales~Spend,
+            data=advertising)
+
+summary(model)
+
+predict(model,
+        newdata=data.frame(Spend=60))

@@ -1,0 +1,12 @@
+data(ChickWeight)
+
+model <- lm(weight~Time+Diet,
+            data=ChickWeight)
+
+summary(model)
+
+pred <- predict(model)
+
+error <- mean((ChickWeight$weight-pred)^2)
+
+print(error)

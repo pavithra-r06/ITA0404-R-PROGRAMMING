@@ -1,0 +1,11 @@
+x <- c(10,20,30,40,50)
+
+boxplot(x)
+
+hist(x)
+
+barplot(x)
+
+plot(x,type="l")
+
+plot(x,type="b")

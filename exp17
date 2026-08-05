@@ -1,0 +1,13 @@
+data(Titanic)
+
+TitanicDF <- as.data.frame(Titanic)
+
+barplot(table(TitanicDF$Survived))
+
+barplot(table(TitanicDF$Class,
+              TitanicDF$Survived),
+        beside=TRUE)
+
+barplot(table(TitanicDF$Sex,
+              TitanicDF$Survived),
+        beside=TRUE)

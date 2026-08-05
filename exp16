@@ -1,0 +1,28 @@
+data(USArrests)
+
+summary(USArrests)
+
+rownames(USArrests)[which.max(USArrests$Rape)]
+
+max(USArrests$Murder)
+
+min(USArrests$Murder)
+
+cor(USArrests)
+
+median_assault <- median(USArrests$Assault)
+
+USArrests[USArrests$Assault>median_assault,]
+
+quantile(USArrests$Murder,0.25)
+
+hist(USArrests$Murder)
+
+plot(density(USArrests$Murder))
+
+plot(USArrests$Murder,
+     USArrests$Assault)
+
+barplot(USArrests$Murder,
+        names.arg=rownames(USArrests),
+        las=2)

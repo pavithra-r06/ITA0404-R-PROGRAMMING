@@ -1,0 +1,19 @@
+data(iris)
+
+dim(iris)
+
+summary(iris)
+
+apply(iris[,1:4],2,sd)
+
+apply(iris[,1:4],2,quantile)
+
+aggregate(.~Species,
+          iris,
+          mean)
+
+iris$PetalGroup <- ifelse(iris$Petal.Length>3,
+                          "Large",
+                          "Small")
+
+table(iris$PetalGroup)
